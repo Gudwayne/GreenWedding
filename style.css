@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -15,7 +17,6 @@
 
 .cinzel{
     font-family: 'Cinzel Decorative', serif;
-    font-weight: 400;
 }
 .greatvibes{
     font-family: 'Great Vibes', cursive;
@@ -47,6 +48,22 @@
   background-color: #af9081;
 }
 
+.entorage{
+    position: relative;
+}
+.entorage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/vectors/vector5.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+    z-index: -1;
+}
 
 .slideshow-container {
     position: relative;
@@ -103,3 +120,4 @@
 .active, .dot:hover {
     background-color: #432d22;
 }
+
