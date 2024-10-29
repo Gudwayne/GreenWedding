@@ -21,8 +21,12 @@
 <body class="bg-gray-100 text-gray-800">
 
     <header class="relative text-center py-10 bg-pink-200 w-full flex flex-col justify-center items-center">
-        <div class="mx-auto my-5">
-            <h1 class="text-2xl font-semibold text-chocolate cinzel">Rebekah Aranuwa <br> & <br> Ayomide Iluyomade</h1>
+        <img src="images/vectors/flower2.png" alt="" class="absolute -top-16 -right-2 w-52 z-0 opacity-40">
+
+        <div class="mx-auto my-5 flex flex-col items-center z-10">
+            <h1 class="text-2xl font-semibold text-chocolate cinzel">Rebekah Aranuwa</h1>
+            <img src="images/vectors/wedding-rings.png" alt="">
+            <h1 class="text-2xl font-semibold text-chocolate cinzel">Ayomide Iluyomade</h1>
         </div>
 
         <div class="relative border border-pink-900 p-2 rounded-t-full my-10">
@@ -39,14 +43,15 @@
 
     <main class="w-full">
         <!-- Event Details -->
-        <section class="relative flex flex-col items-center justify-center bg-chocolate py-5">
-            <img src="images/vectors/frame1.png" alt="" class="opacity-50">
-
+        <div class="relative bg-chocolate w-full h-96 flex items-center justify-center">
+            <img src="images/vectors/frame1.png" alt="" class="goldframe opacity-50">
             <h2 class="text-xl font-bold text-pink-200 cinzel absolute top-32 z-10">Ceremony & Reception</h2>
-            <p class="text-xl text-white mt-4 text-center font-serif font-semibold absolute top-44 z-10">RCCG Grace House Parish <br>
+            <p class="text-xl text-white mt-4 text-center font-serif font-semibold absolute top-44 z-10">RCCG Grace
+                House Parish <br>
                 Alagbole <br>
-                10:00 AM | SATURDAY</p>
-        </section>
+                10:00 AM | SATURDAY
+            </p>
+        </div>
 
         <!-- Story -->
         <section class="bg-pink-200 flex flex-col items-center justify-center">
@@ -54,33 +59,111 @@
         </section>
 
         <!-- RSVP form -->
-        <section class="bg-chocolate flex flex-col items-center justify-center">
-            <h2 class="text-2xl font-semibold text-pink-200 cinzel">RSVP FORM</h2>
-            <!-- <p class="mt-4">Please RSVP by [RSVP Date] through our contact form.</p> -->
+        <section class="relative bg-chocolate flex flex-col items-center justify-center py-5 overflow-hidden">
+            <img src="images/vectors/flower2c.png" alt="" class="absolute -top-7 -left-7 z-0 w-40 opacity-50">
+
+            <h1 class="top-10 text-6xl font-medium text-pink-200 dancingscript z-10 pb-3">Be Our Guest</h1>
+            <h1 class="top-10 text-4xl font-medium text-pink-200 cinzel z-10">RSVP</h1>
+
+            <div id="formMessage" class="pt-5 text-center hidden">
+                <p class="success-message text-green-400 hidden">Thank you! Your RSVP has been submitted successfully.
+                </p>
+                <p class="error-message text-red-400 hidden">Sorry, there was an error. Please try again.</p>
+            </div>
+
+            <form id="rsvpForm" class="w-80 flex flex-col my-8 z-10">
+                <div class="w-full flex items-center space-x-2 items-end mb-5">
+                    <label for="name" class="text-3xl text-pink-200 dancingscript">Full&nbsp;Name:</label>
+                    <input class="w-full border-b border-pink-200 bg-chocolate outline-none text-white" type="text"
+                        name="name" required minlength="2">
+                </div>
+
+                <div class="w-full flex items-center space-x-2 items-end mb-5">
+                    <label for="email" class="text-3xl text-pink-200 dancingscript">Email:</label>
+                    <input class="w-full border-b border-pink-200 bg-chocolate outline-none text-white" type="email"
+                        name="email" required>
+                </div>
+
+                <div class="w-full flex items-center space-x-2 items-end mb-5">
+                    <label for="rsvpStatus"
+                        class="text-3xl text-pink-200 dancingscript">Confirm&nbsp;Attendance:</label>
+                    <select class="w-full p-2 bg-chocolate border-b border-pink-200 text-white outline-none"
+                        name="rsvpStatus" required>
+                        <option value="">Choose</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+
+                <div class="w-full flex items-center space-x-2 items-end mb-7">
+                    <label for="relationship" class="text-3xl text-pink-200 dancingscript">Relation</label>
+                    <select class="w-full p-2 bg-chocolate border-b border-pink-200 text-white outline-none"
+                        name="relationship" required>
+                        <option value="">Choose</option>
+                        <option value="Bride">Bride</option>
+                        <option value="Groom">Groom</option>
+                    </select>
+                </div>
+
+                <button id="submitBtn" class="bg-gold text-white font-semibold p-2 rounded-lg w-40 mx-auto" type="submit">
+                    <span class="submit-text">Submit</span>
+                    <span class="loading-text hidden">Submitting...</span>
+                </button>
+            </form>
+
+            <p class="top-10 text-xl font-medium text-pink-200">Kindly respond by November 25th</p>
         </section>
 
-        <!-- Donations -->
-        <section class="bg-pink-200 flex flex-col items-center justify-center py-5">
-            <h2 class="text-2xl font-semibold text-chocolate cinzel">Donations</h2>
+        <section class="relative bg-pink-200 h-96 flex flex-col items-center justify-center space-y-5 glass">
+            <img src="images/vectors/vector1.png" alt="" class="absolute -bottom-12 opacity-10">
 
-            <p class="text-2xl text-chocolate mt-4 text-center font-serif font-semibold z-10">
-                Account details of Bride 0201060422 <br>
-                Gtbank <br>
-                Rebekah Aranuwa
-            </p>
-            <p class="text-2xl text-chocolate mt-4 text-center font-serif font-semibold z-10">
-                Account details of Groom 0039808124 <br>
-                Union bank <br>
-                Ayomide Iluyomade
-            </p>
+            <div class="flex items-center space-x-2">
+                <h2 class="text-4xl font-semibold text-chocolate font-serif">COUNTDOWN</h2>
+                <img src="images/vectors/sand-clock.png" alt="" class="w-10">
+            </div>
+
+            <!-- <div id="countdown" class="text-4xl font-semibold border border-pink-900 px-3 py-5 rounded-lg countdown">
+            </div> -->
+
+            <div class="countdown">
+                <div class="flip-card" id="days">
+                    <div class="flip-card-inner font-semibold text-chocolate">
+                        <div class="flip-card-front">00</div>
+                        <div class="flip-card-back">00</div>
+                    </div>
+                    <span class="font-semibold text-chocolate">Days</span>
+                </div>
+                <div class="flip-card" id="hours">
+                    <div class="flip-card-inner font-semibold text-chocolate">
+                        <div class="flip-card-front">00</div>
+                        <div class="flip-card-back">00</div>
+                    </div>
+                    <span class="font-semibold text-chocolate">Hours</span>
+                </div>
+                <div class="flip-card" id="minutes">
+                    <div class="flip-card-inner font-semibold text-chocolate">
+                        <div class="flip-card-front">00</div>
+                        <div class="flip-card-back">00</div>
+                    </div>
+                    <span class="font-semibold text-chocolate">Minutes</span>
+                </div>
+                <div class="flip-card" id="seconds">
+                    <div class="flip-card-inner font-semibold text-chocolate">
+                        <div class="flip-card-front">00</div>
+                        <div class="flip-card-back">00</div>
+                    </div>
+                    <span class="font-semibold text-chocolate">Seconds</span>
+                </div>
+            </div>
+
         </section>
 
-        <!-- Bridesmaids & Groomsmen -->
+        <!-- Bs & Gs -->
         <section class="relative bg-chocolate flex flex-col items-center justify-center entorage overflow-hidden">
             <img src="images/vectors/vector1.png" alt="" class="absolute -bottom-12 opacity-30">
-            <h2 class="absolute top-10 text-2xl font-medium text-pink-200 cinzel">Bridesmaids & Groomsmen</h2>
+            <!-- <h2 class="absolute top-10 text-2xl font-medium text-pink-200 cinzel">Bridesmaids & Groomsmen</h2> -->
 
-            <p
+            <!-- <p
                 class="absolute bottom-10 text-xl text-pink-200 mt-4 text-center font-semibold font-serif z-10 border-2 border-pink-200 rounded-lg px-8 py-3">
                 Ezekiel Olaniyan <br>
                 Folarin Osu <br>
@@ -108,30 +191,15 @@
                 Ifeoluwa Olorunda <br>
                 Oreoluwa Ogunsola
 
-            </p>
-        </section>
+            </p> -->
 
-        <!-- Theme & Colour -->
-        <section class="bg-pink-200 flex flex-col items-center justify-center py-5">
-            <h2 class="text-2xl font-semibold text-chocolate-light cinzel">Theme & Colour</h2>
 
-            <div class="w-full h-40 flex items-center justify-evenly">
-                <div class="w-28 h-28 rounded-lg flex items-center justify-center dancingscript bg-pink-300">
-                    Pink
-                </div>
-                <div class="w-28 h-28 rounded-lg flex items-center justify-center dancingscript bg-chocolate-light">
-                    Chocolate
-                </div>
-                <div class="w-28 h-28 rounded-lg flex items-center justify-center dancingscript bg-gold">
-                    Gold
-                </div>
-            </div>
         </section>
 
         <!-- Photo Gallery -->
-        <section class="bg-chocolate-light flex flex-col items-center justify-center py-8">
+        <section class="bg-chocolate flex flex-col items-center justify-center py-8">
             <h2 class="text-4xl font-semibold text-pink-200 cinzel ">Photo Gallery</h2>
-            <img src="images/vectors/vector3.png" alt="" class="-mb-12 z-10 w-72 opacity-50">            
+            <img src="images/vectors/vector3.png" alt="" class="-mb-12 z-10 w-72 opacity-50">
 
             <div class="slideshow-container w-11/12 h-[300px] p-1 rounded-lg bg-pink-200">
                 <div class="slides w-full h-full">
@@ -173,62 +241,52 @@
                 </div>
             </div>
 
-            <img src="images/vectors/vector2.png" alt="" class="-mt-12 z-10 w-72 opacity-50">            
+            <img src="images/vectors/vector2.png" alt="" class="-mt-12 z-10 w-72 opacity-50">
         </section>
 
-        <!-- Countdown Timer -->
-        <section class="bg-pink-200 h-72 flex flex-col items-center justify-center space-y-5 glass">
-            <div class="flex items-center space-x-2">
-                <h2 class="text-4xl font-semibold text-chocolate-light font-serif">COUNTDOWN</h2>
-                <img src="images/vectors/sand-clock.png" alt="" class="w-10">
-            </div>
+        <!-- Theme & Colour -->
+        <section class="bg-pink-200 flex flex-col items-center justify-center py-5">
+            <h2 class="text-2xl font-semibold text-chocolate cinzel">Theme & Colour</h2>
 
-            <!-- <div id="countdown" class="text-4xl font-semibold border border-pink-900 px-3 py-5 rounded-lg countdown">
-            </div> -->
-
-            <div class="countdown">
-                <div class="flip-card" id="days">
-                    <div class="flip-card-inner font-semibold text-chocolate">
-                        <div class="flip-card-front">00</div>
-                        <div class="flip-card-back">00</div>
-                    </div>
-                    <span class="font-semibold text-chocolate">Days</span>
+            <div class="w-full h-40 flex items-center justify-evenly">
+                <div class="w-28 h-28 rounded-lg flex items-center justify-center dancingscript bg-pink-300">
+                    Pink
                 </div>
-                <div class="flip-card" id="hours">
-                    <div class="flip-card-inner font-semibold text-chocolate">
-                        <div class="flip-card-front">00</div>
-                        <div class="flip-card-back">00</div>
-                    </div>
-                    <span class="font-semibold text-chocolate">Hours</span>
+                <div class="w-28 h-28 rounded-lg flex items-center justify-center dancingscript bg-chocolate-light">
+                    Chocolate
                 </div>
-                <div class="flip-card" id="minutes">
-                    <div class="flip-card-inner font-semibold text-chocolate">
-                        <div class="flip-card-front">00</div>
-                        <div class="flip-card-back">00</div>
-                    </div>
-                    <span class="font-semibold text-chocolate">Minutes</span>
-                </div>
-                <div class="flip-card" id="seconds">
-                    <div class="flip-card-inner font-semibold text-chocolate">
-                        <div class="flip-card-front">00</div>
-                        <div class="flip-card-back">00</div>
-                    </div>
-                    <span class="font-semibold text-chocolate">Seconds</span>
+                <div class="w-28 h-28 rounded-lg flex items-center justify-center dancingscript bg-gold">
+                    Gold
                 </div>
             </div>
+        </section>
 
+        <!-- Donations -->
+        <section class="bg-chocolate flex flex-col items-center justify-center py-5">
+            <h2 class="text-2xl font-semibold text-pink-200 cinzel">Donations</h2>
+
+            <p class="text-2xl text-pink-200 mt-4 text-center font-serif font-semibold z-10">
+                Account details of Bride 0201060422 <br>
+                Gtbank <br>
+                Rebekah Aranuwa
+            </p>
+            <p class="text-2xl text-pink-200 mt-4 text-center font-serif font-semibold z-10">
+                Account details of Groom 0039808124 <br>
+                Union bank <br>
+                Ayomide Iluyomade
+            </p>
         </section>
 
         <!-- Contact Information -->
-        <section class="bg-chocolate flex flex-col items-center justify-center">
-            <h2 class="text-2xl font-semibold text-pink-200 cinzel">Contact Information</h2>
+        <section class="bg-pink-200 flex flex-col items-center justify-center">
+            <h2 class="text-2xl font-semibold text-chocolate cinzel">Contact Information</h2>
 
         </section>
 
         <!-- Social Media -->
-        <section class="bg-pink-200 flex flex-col items-center justify-center py-5">
-            <h2 class="text-2xl font-semibold text-chocolate-light cinzel">Social Media</h2>
-            <p class="text-2xl text-chocolate mt-4 text-center font-serif font-semibold z-10">Wedding Hashtag:
+        <section class="bg-chocolate flex flex-col items-center justify-center py-5">
+            <h2 class="text-2xl font-semibold text-pink-200 cinzel">Social Media</h2>
+            <p class="text-2xl text-pink-200 mt-4 text-center font-serif font-semibold z-10">Wedding Hashtag:
                 #Mo'RAYO24</p>
         </section>
 

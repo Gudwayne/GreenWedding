@@ -70,7 +70,9 @@ startCountdown(weddingDate);
 
 
 
-// Slide Show Functions
+//----------------------- Slide Show Functions -------------------------------------
+
+
 let slideIndex = 0;
 const slides = document.querySelector('.slides');
 const totalSlides = document.querySelectorAll('.slide').length;
@@ -121,3 +123,58 @@ function currentSlide(n) {
 
 // Start the slideshow
 showSlides();
+
+
+// ------------------ RSVP Form Submission --------------------------
+
+document.getElementById('rsvpForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Get button and message elements
+    const submitBtn = document.getElementById('submitBtn');
+    const submitText = submitBtn.querySelector('.submit-text');
+    const loadingText = submitBtn.querySelector('.loading-text');
+    const formMessage = document.getElementById('formMessage');
+    const successMessage = formMessage.querySelector('.success-message');
+    const errorMessage = formMessage.querySelector('.error-message');
+
+    // Show loading state
+    submitBtn.disabled = true;
+    submitText.classList.add('hidden');
+    loadingText.classList.remove('hidden');
+
+    const formData = new FormData(e.target);
+    const data = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        rsvpStatus: formData.get('rsvpStatus'),
+        relationship: formData.get('relationship')
+    };
+
+    fetch('https://script.google.com/macros/s/AKfycby8DAqO__J4BGyfFJyUWzglQjTnolHg7KOKzFkt7ZADWvH_YDI3PcfveEKiK4cAmpg_/exec', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        mode: 'no-cors', 
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(() => {
+        // Show success message
+        formMessage.classList.remove('hidden');
+        successMessage.classList.remove('hidden');
+        e.target.reset(); // Clear the form
+    })
+    .catch(error => {
+        // Show error message
+        console.error('Error:', error);
+        formMessage.classList.remove('hidden');
+        errorMessage.classList.remove('hidden');
+    })
+    .finally(() => {
+        // Reset button state
+        submitBtn.disabled = false;
+        submitText.classList.remove('hidden');
+        loadingText.classList.add('hidden');
+    });
+});
