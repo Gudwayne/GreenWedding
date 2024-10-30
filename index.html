@@ -20,8 +20,9 @@
 
 <body class="bg-gray-100 text-gray-800">
 
-    <header class="relative text-center py-10 bg-pink-200 w-full flex flex-col justify-center items-center overflow-hidden">
-        <img src="images/vectors/flower2.png" alt="" class="absolute -top-16 -right-10 w-52 z-0 opacity-20">
+    <header
+        class="relative md:h-screen text-center py-10 bg-pink-200 w-full flex flex-col justify-evenly items-center overflow-hidden">
+        <img src="images/vectors/flower2.png" alt="" class="absolute -top-16 -right-10 w-52 z-0 opacity-40">
 
         <div class="mx-auto my-5 flex flex-col items-center z-10">
             <h1 class="text-2xl font-semibold text-chocolate cinzel">Rebekah Aranuwa</h1>
@@ -32,26 +33,30 @@
         <div class="relative border border-pink-900 p-2 rounded-t-full my-10">
             <img src="images/vectors/flower.png" alt="" class="w-36 absolute -top-10 -left-9">
 
-            <img src="images/streaks/photo4.jpeg" alt="" class="w-72 rounded-t-full">
+            <img src="images/streaks/photo4.jpeg" alt="" class="w-72 md:w-96 rounded-t-full">
         </div>
 
-        <p class="mt-2 font-serif text-xl font-medium text-gold">SAVE THE DATE</p>
-
-        <p class="mt-2 text-4xl font-medium text-gold dancingscript">30 | 11 | 24</p>
+        <div class="mx-auto flex flex-col items-center justify-center">
+            <p class="mt-2 font-serif text-xl font-medium text-chocolate">SAVE THE DATE</p>
+            <p class="mt-2 text-4xl font-semibold text-gold dancingscript">30 | 11 | 24</p>
+        </div>
     </header>
 
 
     <main class="w-full">
         <!-- Event Details✔️ -->
-        <div class="relative bg-chocolate w-full h-96 flex items-center justify-center">
+        <div class="relative bg-chocolate w-full h-[520px] flex items-center justify-center">
             <img src="images/vectors/frame1.png" alt="" class="goldframe opacity-50">
-            <h2 class="text-xl font-bold text-pink-200 cinzel absolute top-32 z-10">Ceremony & Reception</h2>
-            <p class="text-xl text-white mt-4 text-center font-serif font-semibold absolute top-44 z-10">RCCG Grace
-                House Parish <br>
-                Alagbole <br>
-                10:00 AM Prompt <br> 
-                SATURDAY
-            </p>
+
+            <h2 class="text-xl md:text-4xl font-bold text-pink-200 cinzel absolute top-32 md:top-52 z-10">Ceremony &
+                Reception</h2>
+
+            <div class="text-xl md:text-4xl text-white mt-4 text-center font-semibold absolute top-44 md:top-64 z-10">
+                <p class="leading-relaxed font-serif">RCCG Grace House Parish</p>
+                <p class="leading-relaxed font-serif">Alagbole</p>
+                <p class="leading-relaxed font-serif">10:00 AM Prompt</p>
+                <p class="leading-relaxed font-serif">SATURDAY</p>
+            </div>
         </div>
 
         <!-- Story -->
@@ -60,8 +65,9 @@
         </section>
 
         <!-- RSVP form✔️ -->
-        <section class="relative bg-chocolate flex flex-col items-center justify-center py-5 overflow-hidden">
-            <img src="images/vectors/flower2c.png" alt="" class="absolute -top-7 -left-7 z-0 w-40 opacity-50">
+        <section class="relative bg-chocolate flex flex-col items-center justify-center py-5 md:py-10 overflow-hidden">
+            <img src="images/vectors/flower2c.png" alt=""
+                class="absolute -top-7 md:-top-12 -left-7 z-0 w-40 md:w-60 opacity-50">
 
             <h1 class="top-10 text-6xl text-pink-200 dancingscript z-10 pb-3">Be Our Guest</h1>
             <h1 class="top-10 text-5xl font-medium text-pink-200 cinzel z-10">RSVP</h1>
@@ -72,33 +78,32 @@
                 <p class="error-message text-red-400 hidden">Sorry, there was an error. Please try again.</p>
             </div>
 
-            <form id="rsvpForm" class="w-80 flex flex-col my-8 z-10">
-                <div class="w-full flex items-center space-x-2 items-end mb-5">
-                    <label for="name" class="text-3xl text-pink-200 dancingscript">Full&nbsp;Name:</label>
-                    <input class="w-full border-b border-pink-200 bg-chocolate outline-none text-white" type="text"
-                        name="name" required minlength="2">
+            <form id="rsvpForm" class="w-80 md:w-7/12 flex flex-col my-8 md:my-10 z-10">
+                <div class="w-full flex space-x-2 md:space-x-4 items-end mb-5 md:mb-8">
+                    <label for="name" class="text-3xl text-white dancingscript">Full&nbsp;Name:</label>
+                    <input class="w-full text-2xl border-b border-white bg-chocolate outline-none text-white"
+                        type="text" name="name" required minlength="2">
                 </div>
 
-                <div class="w-full flex items-center space-x-2 items-end mb-5">
-                    <label for="email" class="text-3xl text-pink-200 dancingscript">Email:</label>
-                    <input class="w-full border-b border-pink-200 bg-chocolate outline-none text-white" type="email"
-                        name="email" required>
+                <div class="w-full flex space-x-2 md:space-x-4 items-end mb-5 md:mb-8">
+                    <label for="email" class="text-3xl text-white dancingscript">Email:</label>
+                    <input class="w-full text-2xl border-b border-white bg-chocolate outline-none text-white"
+                        type="email" name="email" required>
                 </div>
 
-                <div class="w-full flex items-center space-x-2 items-end mb-5">
-                    <label for="rsvpStatus"
-                        class="text-3xl text-pink-200 dancingscript">Confirm&nbsp;Attendance:</label>
-                    <select class="w-full p-2 bg-chocolate border-b border-pink-200 text-white outline-none"
-                        name="rsvpStatus" required>
+                <div class="w-full flex space-x-2 md:space-x-4 items-end mb-5 md:mb-8">
+                    <label for="rsvpStatus" class="text-3xl text-white dancingscript">Confirm&nbsp;Attendance:</label>
+                    <select class="w-full bg-chocolate border-b border-white text-white outline-none" name="rsvpStatus"
+                        required>
                         <option value=""></option>
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
                     </select>
                 </div>
 
-                <div class="w-full flex items-center space-x-2 items-end mb-7">
-                    <label for="relationship" class="text-3xl text-pink-200 dancingscript">Relation</label>
-                    <select class="w-full p-2 bg-chocolate border-b border-pink-200 text-white outline-none"
+                <div class="w-full flex space-x-2 md:space-x-4 items-end mb-7 md:mb-10">
+                    <label for="relationship" class="text-3xl text-white dancingscript">Relation:</label>
+                    <select class="w-full bg-chocolate border-b border-white text-white outline-none"
                         name="relationship" required>
                         <option value=""></option>
                         <option value="Bride's Family">Bride's Family</option>
@@ -111,17 +116,22 @@
                     </select>
                 </div>
 
-                <button id="submitBtn" class="bg-gold text-white font-semibold p-2 rounded-lg w-40 mx-auto" type="submit">
+                <button id="submitBtn"
+                    class="bg-gold text-white md:text-xl font-semibold p-2 rounded-lg w-40 md:w-52 mx-auto"
+                    type="submit">
                     <span class="submit-text">Submit</span>
                     <span class="loading-text hidden">Submitting...</span>
                 </button>
             </form>
 
-            <p class="top-10 text-2xl font-medium text-pink-200 dancingscript">Kindly respond by November 25th</p>
+            <p class="top-10 text-2xl md:text-3xl font-medium text-pink-200 dancingscript">Kindly respond by November
+                25th</p>
         </section>
 
-        <section class="relative bg-pink-200 h-96 flex flex-col items-center justify-center space-y-5 glass">
-            <img src="images/vectors/vector1.png" alt="" class="absolute -bottom-12 opacity-10">
+        <!-- CountDown Timer -->
+        <section
+            class="relative bg-pink-200 h-96 flex flex-col items-center justify-center space-y-5 glass overflow-hidden">
+            <img src="images/vectors/vector1.png" alt="" class="absolute bottom-0 opacity-10 md:w-8/12">
 
             <div class="flex items-center space-x-2">
                 <h2 class="text-4xl font-semibold text-chocolate font-serif">COUNTDOWN</h2>
@@ -133,28 +143,28 @@
 
             <div class="countdown">
                 <div class="flip-card" id="days">
-                    <div class="flip-card-inner font-semibold text-chocolate">
+                    <div class="flip-card-inner font-semibold text-black">
                         <div class="flip-card-front">00</div>
                         <div class="flip-card-back">00</div>
                     </div>
                     <span class="font-semibold text-chocolate">Days</span>
                 </div>
                 <div class="flip-card" id="hours">
-                    <div class="flip-card-inner font-semibold text-chocolate">
+                    <div class="flip-card-inner font-semibold text-black">
                         <div class="flip-card-front">00</div>
                         <div class="flip-card-back">00</div>
                     </div>
                     <span class="font-semibold text-chocolate">Hours</span>
                 </div>
                 <div class="flip-card" id="minutes">
-                    <div class="flip-card-inner font-semibold text-chocolate">
+                    <div class="flip-card-inner font-semibold text-black">
                         <div class="flip-card-front">00</div>
                         <div class="flip-card-back">00</div>
                     </div>
                     <span class="font-semibold text-chocolate">Minutes</span>
                 </div>
                 <div class="flip-card" id="seconds">
-                    <div class="flip-card-inner font-semibold text-chocolate">
+                    <div class="flip-card-inner font-semibold text-black">
                         <div class="flip-card-front">00</div>
                         <div class="flip-card-back">00</div>
                     </div>
@@ -166,28 +176,28 @@
 
         <!-- Photo Gallery✔️ -->
         <section class="bg-chocolate flex flex-col items-center justify-center py-8">
-            <h2 class="text-4xl font-semibold text-pink-200 cinzel ">Photo Gallery</h2>
-            <img src="images/vectors/vector3.png" alt="" class="-mb-12 z-10 w-72 opacity-50">
+            <h2 class="text-4xl font-semibold text-pink-200 cinzel pb-3">Photo Gallery</h2>
+            <img src="images/vectors/vector3.png" alt="" class="-mb-12 z-10 w-72 md:w-80 opacity-50">
 
-            <div class="slideshow-container w-11/12 h-[300px] p-1 rounded-lg bg-pink-200">
+            <div class="slideshow-container w-11/12 lg:w-6/12 h-[300px] rounded-lg bg-pink-200">
                 <div class="slides w-full h-full">
-                    <div class="slide min-w-full min-h-full px-1"><img src="images/streaks/photo1.jpeg" alt="Photo 1">
+                    <div class="slide min-w-full min-h-full p-1"><img src="images/streaks/photo1.jpeg" alt="Photo 1">
                     </div>
-                    <div class="slide min-w-full min-h-full px-1"><img src="images/streaks/photo2.jpeg" alt="Photo 2">
+                    <div class="slide min-w-full min-h-full p-1"><img src="images/streaks/photo2.jpeg" alt="Photo 2">
                     </div>
-                    <div class="slide min-w-full min-h-full px-1"><img src="images/streaks/photo3.jpeg" alt="Photo 3">
+                    <div class="slide min-w-full min-h-full p-1"><img src="images/streaks/photo3.jpeg" alt="Photo 3">
                     </div>
-                    <div class="slide min-w-full min-h-full px-1"><img src="images/streaks/photo4.jpeg" alt="Photo 4">
+                    <div class="slide min-w-full min-h-full p-1"><img src="images/streaks/photo4.jpeg" alt="Photo 4">
                     </div>
-                    <div class="slide min-w-full min-h-full px-1"><img src="images/streaks/photo5.jpeg" alt="Photo 5">
+                    <div class="slide min-w-full min-h-full p-1"><img src="images/streaks/photo5.jpeg" alt="Photo 5">
                     </div>
-                    <div class="slide min-w-full min-h-full px-1"><img src="images/streaks/photo6.jpeg" alt="Photo 6">
+                    <div class="slide min-w-full min-h-full p-1"><img src="images/streaks/photo6.jpeg" alt="Photo 6">
                     </div>
-                    <div class="slide min-w-full min-h-full px-1"><img src="images/streaks/photo7.jpeg" alt="Photo 7">
+                    <div class="slide min-w-full min-h-full p-1"><img src="images/streaks/photo7.jpeg" alt="Photo 7">
                     </div>
-                    <div class="slide min-w-full min-h-full px-1"><img src="images/streaks/photo8.jpeg" alt="Photo 8">
+                    <div class="slide min-w-full min-h-full p-1"><img src="images/streaks/photo8.jpeg" alt="Photo 8">
                     </div>
-                    <div class="slide min-w-full min-h-full px-1"><img src="images/streaks/photo9.jpeg" alt="Photo 9">
+                    <div class="slide min-w-full min-h-full p-1"><img src="images/streaks/photo9.jpeg" alt="Photo 9">
                     </div>
                 </div>
 
@@ -213,51 +223,103 @@
         </section>
 
         <!-- Theme & Colour✔️ -->
-        <section class="bg-pink-200 flex flex-col items-center justify-center py-5">
-            <h2 class="text-2xl font-semibold text-chocolate cinzel">Theme & Colour</h2>
+        <section class="bg-pink-200 flex flex-col items-center justify-center py-5 md:py-10">
+            <h2 class="text-2xl font-semibold text-chocolate cinzel mb-5">Theme & Colour</h2>
 
             <div class="w-full h-40 flex items-center justify-evenly text-white">
-                <div class="w-28 h-28 rounded-lg flex items-center justify-center dancingscript bg-pink-300">
+                <div
+                    class="w-28 h-28 md:w-36 md:h-36 rounded-lg flex items-center justify-center dancingscript bg-pink-300">
                     Baby Pink
                 </div>
-                <div class="w-28 h-28 rounded-lg flex items-center justify-center dancingscript bg-chocolate">
+                <div
+                    class="w-28 h-28 md:w-36 md:h-36 rounded-lg flex items-center justify-center dancingscript bg-chocolate">
                     Chocolate
                 </div>
-                <div class="w-28 h-28 rounded-lg flex items-center justify-center dancingscript bg-gold">
+                <div
+                    class="w-28 h-28 md:w-36 md:h-36 rounded-lg flex items-center justify-center dancingscript bg-gold">
                     A Touch of Gold
                 </div>
             </div>
         </section>
 
-        <!-- Donations✔️ -->
-        <section class="bg-chocolate flex flex-col items-center justify-center py-5">
-            <h2 class="text-2xl font-semibold text-pink-200 cinzel">Donations</h2>
+        <div class="lg:flex items-center w-full bg-chocolate border-t border-pink-900">
+            <!-- Donations✔️ -->
+            <section class="bg-chocolate flex flex-col items-center justify-center py-5 lg:w-1/2 h-full">
+                <h2 class="text-2xl font-semibold text-pink-200 cinzel">Donations</h2>
 
-            <p class="w-96 text-pink-200 text-2xl text-center dancingscript py-5">
-                We know you love what we share and will majorly appreciate cash gifts. <br>
-                Donations can be made into;
-            </p>
+                <p class="w-96 text-pink-200 text-2xl text-center dancingscript py-5">
+                    We know you love what we share and <br> will majorly appreciate cash gifts. <br>
+                    Donations can be made into;
+                </p>
 
-            <p class="w-80 border border-pink-200 rounded-lg p-2 text-xl text-pink-200 mt-4 text-center font-serif font-semibold z-10">
-                Account details of Bride <br>
-                0201060422 <br>
-                Gtbank <br>
-                Rebekah Aranuwa
-            </p>
-        
-            <p class="w-80 border border-pink-200 rounded-lg p-2 text-xl text-pink-200 mt-4 text-center font-serif font-semibold z-10">
-                Account details of Groom <br>
-                0039808124 <br>
-                Union bank <br>
-                Ayomide Iluyomade
-            </p>
-        </section>
+                <p
+                    class="w-80 md:w-96 border border-pink-200 rounded-lg p-2 text-xl text-pink-200 mt-4 text-center font-serif font-semibold z-10">
+                    Account details of Bride <br>
+                    0201060422 <br>
+                    Gtbank <br>
+                    Rebekah Aranuwa
+                </p>
 
-        <!-- Contact Information -->
-        <section class="bg-pink-200 flex flex-col items-center justify-center">
-            <h2 class="text-2xl font-semibold text-chocolate cinzel">Contact Information</h2>
+                <p
+                    class="w-80 md:w-96 border border-pink-200 rounded-lg p-2 text-xl text-pink-200 mt-4 text-center font-serif font-semibold z-10">
+                    Account details of Groom <br>
+                    0039808124 <br>
+                    Union bank <br>
+                    Ayomide Iluyomade
+                </p>
+            </section>
 
-        </section>
+            <!-- Contact Information -->
+            <section class="bg-pink-200 flex flex-col items-center justify-center py-8 lg:w-1/2 lg:h-full">
+                <h2 class="text-2xl font-semibold text-chocolate cinzel pb-5">Contact Information</h2>
+
+                <!-- Contact Details -->
+                <div class="mb-8 w-11/12 md:w-8/12">
+                    <h3 class="text-xl font-semibold text-chocolate">Phone Numbers:</h3>
+                    <ul class="mt-2 text-chocolate text-xl space-y-2">
+                        <li>Lanre - <a href="tel:+2348026319473" class="text-blue-500 hover:underline">+234 802 631
+                                9473</a>
+                        </li>
+                        <li>Abigail - <a href="tel:+2348147104155" class="text-blue-500 hover:underline">+234 814 710
+                                4155</a></li>
+                        <li>Lewis - <a href="tel:+2348103620266" class="text-blue-500 hover:underline">+234 810 362
+                                0266</a>
+                        </li>
+                    </ul>
+                    <h3 class="text-xl font-semibold text-chocolate mt-4">Email:</h3>
+                    <p class="text-chocolate">
+                        For additional questions, please reach out to us via email at
+                        <a href="mailto:" class="text-blue-500 hover:underline">
+                            examplemail@gmail.com
+                        </a>
+                    </p>
+                </div>
+
+                <!-- Guestbook Section -->
+                <div class="border-t border-pink-900 pt-6 w-11/12 md:w-8/12">
+                    <h3 class="text-xl font-semibold text-chocolate mb-2">Guestbook</h3>
+                    <p class="text-chocolate mb-4">Leave a message or well-wishes for the couple below:</p>
+                    <form id="guestbookForm" class="space-y-4">
+                        <div>
+                            <label for="guestName" class="block text-chocolate">Your Name:</label>
+                            <input type="text" id="guestName" name="guestName"
+                                class="w-full p-2 border border-gray-300 rounded-lg" placeholder="Full Name" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-chocolate">Your Message:</label>
+                            <textarea id="message" name="message" rows="4"
+                                class="w-full p-2 border border-gray-300 rounded-lg" placeholder="Your message here..."
+                                required></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-gold hover:bg-blue-600 text-white font-semibold py-2 rounded-lg">
+                            Submit Message
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+        </div>
 
         <!-- Social Media✔️ -->
         <section class="bg-chocolate flex flex-col items-center justify-center py-5">
@@ -265,7 +327,6 @@
             <p class="text-2xl text-pink-200 mt-4 text-center font-serif font-semibold z-10">Wedding Hashtag:
                 #Mo'RAYO24</p>
         </section>
-
     </main>
 
     <!-- Footer -->
