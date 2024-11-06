@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Invitation</title>
+    <title>The Iluyomades</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
@@ -46,9 +46,9 @@
     <main class="w-full">
         <!-- Event Details✔️ -->
         <div class="relative bg-chocolate w-full h-[520px] flex items-center justify-center">
-            <img src="images/vectors/frame1.png" alt="" class="goldframe opacity-50">
+            <img src="images/vectors/frame1.png" alt="" class="goldframe opacity-50 w-full h-full">
 
-            <h2 class="text-xl md:text-4xl font-bold text-pink-200 cinzel absolute top-28 md:top-52 z-10">Ceremony &
+            <h2 class="text-2xl md:text-4xl font-bold text-pink-200 cinzel absolute top-28 md:top-52 z-10">Ceremony &
                 Reception</h2>
 
             <div class="text-xl md:text-4xl text-white mt-4 text-center font-semibold absolute top-36 md:top-64 z-10">
@@ -59,9 +59,48 @@
             </div>
         </div>
 
-        <!-- Story -->
-        <section class="bg-pink-200 flex flex-col items-center justify-center">
-            <h2 class="text-2xl font-semibold text-chocolate-light cinzel">Story</h2>
+        <!-- Story✔️ -->
+        <section class="bg-pink-200 flex flex-col items-center justify-center py-5">
+            <h2 class="text-4xl font-semibold text-gold cinzel pb-3">Story</h2>
+
+            <div class="p-2 md:px-7 w-11/12 md:w-10/12 h-80 md:h-96 border border-pink-900 rounded-lg overflow-scroll">
+                <p class="dancingscript text-xl md:text-2xl text-chocolate text-center">
+                    We first met in late 2019 at church, where we were paired up for an evangelism activity. Afterward,
+                    we
+                    exchanged contact details and kept in touch. Our conversations revealed we had a lot in common, and
+                    he
+                    discovered that I knew French, which he was eager to learn. What started as a simple exchange of
+                    knowledge quickly turned into regular chats, and before long, we became close friends, with him
+                    becoming
+                    an integral part of my daily life.
+                    <br>
+                    For his birthday in 2020, I gave him a gift as a gesture of friendship, and he was deeply touched.
+                    Then,
+                    during the lockdown, he sent me a thoughtful birthday gift, which made me feel incredibly special.
+                    After
+                    that, our bond grew even stronger, and by the time the lockdown ended, we were incredibly close. He
+                    knew
+                    practically everything about me, including my family, who adore him.
+                    <br>
+                    In 2022, we decided to take our relationship to the next level and got married. And now, here we
+                    are.
+                    <br>
+                    PS: Ay still can't speak French
+                </p>
+            </div>
+
+            <div class="video-container w-11/12 md:w-10/12">
+                <div class="video-frame"></div>
+                <div class="video-wrapper">
+                    <video id="myVideo">
+                        <source src="images/streaks/theStory.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <button class="play-button" id="playButton" aria-label="Play video">
+                        <span class="play-icon"></span>
+                    </button>
+                </div>
+            </div>
         </section>
 
         <!-- RSVP form✔️ -->
@@ -73,7 +112,7 @@
             <h1 class="top-10 text-5xl font-medium text-pink-200 cinzel z-10">RSVP</h1>
 
             <div id="formMessage" class="pt-5 text-center hidden">
-                <p class="success-message text-green-400 hidden">Thank you! Your RSVP has been submitted successfully.
+                <p class="success-message text-green-400 hidden">Thank you! Your RSVP has been submitted successfully!
                 </p>
                 <p class="error-message text-red-400 hidden">Sorry, there was an error. Please try again.</p>
             </div>
@@ -128,50 +167,24 @@
                 25th</p>
         </section>
 
-        <!-- CountDown Timer -->
-        <section
-            class="relative bg-pink-200 h-96 flex flex-col items-center justify-center space-y-5 glass overflow-hidden">
-            <img src="images/vectors/vector1.png" alt="" class="absolute bottom-0 opacity-10 md:w-8/12">
+        <!-- Theme & Colour✔️ -->
+        <section class="bg-pink-200 flex flex-col items-center justify-center py-5 md:py-10">
+            <h2 class="text-2xl font-semibold text-chocolate cinzel mb-5">Theme & Colour</h2>
 
-            <div class="flex items-center space-x-2">
-                <h2 class="text-4xl font-semibold text-chocolate font-serif">COUNTDOWN</h2>
-                <img src="images/vectors/sand-clock.png" alt="" class="w-10">
-            </div>
-
-            <!-- <div id="countdown" class="text-4xl font-semibold border border-pink-900 px-3 py-5 rounded-lg countdown">
-            </div> -->
-
-            <div class="countdown">
-                <div class="flip-card" id="days">
-                    <div class="flip-card-inner font-semibold text-black">
-                        <div class="flip-card-front">00</div>
-                        <div class="flip-card-back">00</div>
-                    </div>
-                    <span class="font-semibold text-chocolate">Days</span>
+            <div class="w-full h-40 flex items-center justify-evenly text-white">
+                <div
+                    class="w-28 h-28 md:w-36 md:h-36 rounded-lg flex items-center justify-center dancingscript bg-pink-300">
+                    Baby Pink
                 </div>
-                <div class="flip-card" id="hours">
-                    <div class="flip-card-inner font-semibold text-black">
-                        <div class="flip-card-front">00</div>
-                        <div class="flip-card-back">00</div>
-                    </div>
-                    <span class="font-semibold text-chocolate">Hours</span>
+                <div
+                    class="w-28 h-28 md:w-36 md:h-36 rounded-lg flex items-center justify-center dancingscript bg-chocolate">
+                    Chocolate
                 </div>
-                <div class="flip-card" id="minutes">
-                    <div class="flip-card-inner font-semibold text-black">
-                        <div class="flip-card-front">00</div>
-                        <div class="flip-card-back">00</div>
-                    </div>
-                    <span class="font-semibold text-chocolate">Minutes</span>
-                </div>
-                <div class="flip-card" id="seconds">
-                    <div class="flip-card-inner font-semibold text-black">
-                        <div class="flip-card-front">00</div>
-                        <div class="flip-card-back">00</div>
-                    </div>
-                    <span class="font-semibold text-chocolate">Seconds</span>
+                <div
+                    class="w-28 h-28 md:w-36 md:h-36 rounded-lg flex items-center justify-center dancingscript bg-gold">
+                    A Touch of Gold
                 </div>
             </div>
-
         </section>
 
         <!-- Photo Gallery✔️ -->
@@ -221,28 +234,55 @@
 
             <img src="images/vectors/vector2.png" alt="" class="-mt-12 z-10 w-72 opacity-50">
         </section>
+        
+        <!-- CountDown Timer -->
+        <section
+            class="relative bg-pink-200 h-96 flex flex-col items-center justify-center space-y-5 glass overflow-hidden">
+            <img src="images/vectors/vector1.png" alt="" class="absolute bottom-0 opacity-10 md:w-8/12">
 
-        <!-- Theme & Colour✔️ -->
-        <section class="bg-pink-200 flex flex-col items-center justify-center py-5 md:py-10">
-            <h2 class="text-2xl font-semibold text-chocolate cinzel mb-5">Theme & Colour</h2>
+            <div class="flex items-center space-x-2">
+                <h2 class="text-4xl font-semibold text-chocolate font-serif">COUNTDOWN</h2>
+                <img src="images/vectors/sand-clock.png" alt="" class="w-10">
+            </div>
 
-            <div class="w-full h-40 flex items-center justify-evenly text-white">
-                <div
-                    class="w-28 h-28 md:w-36 md:h-36 rounded-lg flex items-center justify-center dancingscript bg-pink-300">
-                    Baby Pink
+            <!-- <div id="countdown" class="text-4xl font-semibold border border-pink-900 px-3 py-5 rounded-lg countdown">
+            </div> -->
+
+            <div class="countdown">
+                <div class="flip-card" id="days">
+                    <div class="flip-card-inner font-semibold text-black">
+                        <div class="flip-card-front">00</div>
+                        <div class="flip-card-back">00</div>
+                    </div>
+                    <span class="font-semibold text-chocolate">Days</span>
                 </div>
-                <div
-                    class="w-28 h-28 md:w-36 md:h-36 rounded-lg flex items-center justify-center dancingscript bg-chocolate">
-                    Chocolate
+                <div class="flip-card" id="hours">
+                    <div class="flip-card-inner font-semibold text-black">
+                        <div class="flip-card-front">00</div>
+                        <div class="flip-card-back">00</div>
+                    </div>
+                    <span class="font-semibold text-chocolate">Hours</span>
                 </div>
-                <div
-                    class="w-28 h-28 md:w-36 md:h-36 rounded-lg flex items-center justify-center dancingscript bg-gold">
-                    A Touch of Gold
+                <div class="flip-card" id="minutes">
+                    <div class="flip-card-inner font-semibold text-black">
+                        <div class="flip-card-front">00</div>
+                        <div class="flip-card-back">00</div>
+                    </div>
+                    <span class="font-semibold text-chocolate">Minutes</span>
+                </div>
+                <div class="flip-card" id="seconds">
+                    <div class="flip-card-inner font-semibold text-black">
+                        <div class="flip-card-front">00</div>
+                        <div class="flip-card-back">00</div>
+                    </div>
+                    <span class="font-semibold text-chocolate">Seconds</span>
                 </div>
             </div>
+
         </section>
 
         <div class="lg:flex items-center w-full bg-chocolate border-t border-pink-900">
+
             <!-- Donations✔️ -->
             <section class="bg-chocolate flex flex-col items-center justify-center py-5 lg:w-1/2 h-full">
                 <h2 class="text-2xl font-semibold text-pink-200 cinzel">Donations</h2>
@@ -289,16 +329,22 @@
                     <h3 class="text-xl font-semibold text-chocolate mt-4">Email:</h3>
                     <p class="text-chocolate">
                         For additional questions, please reach out to us via email at
-                        <a href="mailto:" class="text-blue-500 hover:underline">
-                            examplemail@gmail.com
+                        <a href="mailto:iluayo19@gmail.com" class="text-blue-500 hover:underline">
+                            iluayo19@gmail.com
                         </a>
                     </p>
                 </div>
 
                 <!-- Guestbook Section -->
-                <div class="border-t border-pink-900 pt-6 w-11/12 md:w-8/12">
+                <div  class="border-t border-pink-900 pt-6 w-11/12 md:w-8/12">
                     <h3 class="text-xl font-semibold text-chocolate mb-2">Guestbook</h3>
                     <p class="text-chocolate mb-4">Leave a message or well-wishes for the couple below:</p>
+                    
+                    <div id="formMessage2" class="text-center hidden">
+                        <p class="success-message2 text-green-400 hidden">Thank you! Your message was sent successfully!
+                        </p>
+                        <p class="error-message2 text-red-400 hidden">Sorry, there was an error. Please try again.</p>
+                    </div>
                     <form id="guestbookForm" class="space-y-4">
                         <div>
                             <label for="guestName" class="block text-chocolate">Your Name:</label>
@@ -311,9 +357,9 @@
                                 class="w-full p-2 border border-gray-300 rounded-lg" placeholder="Your message here..."
                                 required></textarea>
                         </div>
-                        <button type="submit"
-                            class="w-full bg-gold text-white font-semibold py-2 rounded-lg">
-                            Submit Message
+                        <button type="submit" id="submitBtn2" class="w-full bg-gold text-white font-semibold py-2 rounded-lg">
+                            <span class="submit-text2">Submit Message</span>
+                            <span class="loading-text2 hidden">Submitting...</span>
                         </button>
                     </form>
                 </div>

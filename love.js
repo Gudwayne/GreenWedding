@@ -178,3 +178,100 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
         loadingText.classList.add('hidden');
     });
 });
+
+
+// ------------ Video functionality ------------------------
+
+const video = document.getElementById('myVideo');
+const playButton = document.getElementById('playButton');
+const videoWrapper = document.querySelector('.video-wrapper');
+
+// Function to toggle play/pause
+function togglePlay() {
+  if (video.paused) {
+    video.play();
+    playButton.classList.add('hidden');
+  } else {
+    video.pause();
+    playButton.classList.remove('hidden');
+  }
+}
+
+// Play/pause when clicking the button
+playButton.addEventListener('click', togglePlay);
+
+// Play/pause when clicking the video
+video.addEventListener('click', togglePlay);
+
+// Show button when video is paused
+video.addEventListener('pause', () => {
+  playButton.classList.remove('hidden');
+});
+
+// Hide button when video starts playing
+video.addEventListener('play', () => {
+  playButton.classList.add('hidden');
+});
+
+// Show button when hovering over video while playing
+videoWrapper.addEventListener('mouseenter', () => {
+  if (!video.paused) {
+    playButton.classList.remove('hidden');
+  }
+});
+
+// Hide button when mouse leaves video area (only if video is playing)
+videoWrapper.addEventListener('mouseleave', () => {
+  if (!video.paused) {
+    playButton.classList.add('hidden');
+  }
+});
+
+// ----------------- Guestbook Submission ------------------
+
+document.getElementById('guestbookForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Get button and message elements
+    const submitBtn2 = document.getElementById('submitBtn2');
+    const submitText2 = submitBtn2.querySelector('.submit-text2');
+    const loadingText2 = submitBtn2.querySelector('.loading-text2');
+    const formMessage2 = document.getElementById('formMessage2');
+    const successMessage2 = formMessage2.querySelector('.success-message2');
+    const errorMessage2 = formMessage2.querySelector('.error-message2');
+
+    
+    submitBtn2.disabled = true;
+    submitText2.classList.add('hidden');
+    loadingText2.classList.remove('hidden');
+
+    const guestWish = new FormData(e.target);
+    const text = {
+        fullname: guestWish.get('guestName'),
+        message: guestWish.get('message')
+    }
+
+    fetch('https://script.google.com/macros/s/AKfycbwVkklqUajFaRdxFvVKoXGMKa4DWiImDT0BI3nrTnzzoepetU6nzEBuT-4rngMh0WYEPQ/exec', {
+        method: 'POST',
+        body: JSON.stringify(text),
+        mode: 'no-cors',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(() => {
+        // Show success message
+        formMessage2.classList.remove('hidden');
+        successMessage2.classList.remove('hidden');
+        e.target.reset(); 
+    }).catch(err => {
+        // Show error message
+        console.error('Error:', err);
+        formMessage2.classList.remove('hidden');
+        errorMessage2.classList.remove('hidden');
+    }).finally(() => {
+        // Reset button state
+        submitBtn2.disabled = false;
+        submitText2.classList.remove('hidden');
+        loadingText2.classList.add('hidden');
+    });
+});
