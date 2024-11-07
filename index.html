@@ -13,12 +13,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
         rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="icon" href="/images/vectors/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-100 text-gray-800">
+<body>
 
     <header
         class="relative text-center py-10 bg-pink-200 w-full flex flex-col justify-evenly items-center overflow-hidden">
@@ -63,9 +63,9 @@
         <section class="bg-pink-200 flex flex-col items-center justify-center py-5">
             <h2 class="text-4xl font-semibold text-gold cinzel pb-3">Story</h2>
 
-            <div class="p-2 md:px-7 w-11/12 md:w-10/12 h-80 md:h-96 border border-pink-900 rounded-lg overflow-auto">
-                <p class="dancingscript text-xl md:text-2xl text-chocolate text-center">
-                    We first met in late 2019 at church, where we were paired up for an evangelism activity. Afterward,
+            <div class="p-1 md:px-7 w-11/12 md:w-10/12 h-80 md:h-96 border border-pink-900 rounded-lg overflow-auto">
+                <p class="dancingscript text-2xl text-chocolate text-center">
+                    We first met in late 2019 at church, where we were paired up for an evangelical activity. Afterward,
                     we
                     exchanged contact details and kept in touch. Our conversations revealed we had a lot in common, and
                     he
@@ -98,6 +98,7 @@
                     </video>
                     <button class="play-button" id="playButton" aria-label="Play video">
                         <span class="play-icon"></span>
+                        <span class="pause-icon hidden"></span>
                     </button>
                 </div>
             </div>
@@ -168,21 +169,22 @@
         </section>
 
         <!-- Theme & Colour✔️ -->
-        <section class="bg-pink-200 flex flex-col items-center justify-center py-5 md:py-10">
-            <h2 class="text-2xl font-semibold text-chocolate cinzel mb-5">Theme & Colour</h2>
+        <section class="h-80 bg-pink-200 flex flex-col items-center justify-center py-5 md:py-10">
+            <h2 class="text-2xl font-semibold text-chocolate cinzel pb-7">Theme & Colour</h2>
 
             <div class="w-full h-40 flex items-center justify-evenly text-white">
-                <div
-                    class="w-28 h-28 md:w-36 md:h-36 rounded-lg flex items-center justify-center dancingscript bg-pink-300">
-                    Baby Pink
+                <div class="w-28 h-28 md:w-36 md:h-36 relative rounded-lg flex items-center justify-center bg-pink-300">
+                    <img src="images/vectors/pink5.jpeg" alt="" class="w-full h-full rounded-lg">
+                    <p class="absolute dancingscript">Baby Pink</p>
                 </div>
                 <div
-                    class="w-28 h-28 md:w-36 md:h-36 rounded-lg flex items-center justify-center dancingscript bg-chocolate">
-                    Chocolate
+                    class="w-28 h-28 md:w-36 md:h-36 relative rounded-lg flex items-center justify-center bg-chocolate">
+                    <img src="images/vectors/choco2.jpeg" alt="" class="w-full h-full rounded-lg">
+                    <p class="absolute dancingscript">Chocolate</p>
                 </div>
-                <div
-                    class="w-28 h-28 md:w-36 md:h-36 rounded-lg flex items-center justify-center dancingscript bg-gold">
-                    A Touch of Gold
+                <div class="w-28 h-28 md:w-36 md:h-36 relative rounded-lg flex items-center justify-center">
+                    <img src="images/vectors/gold.jpeg" alt="" class="w-full h-full rounded-lg">
+                    <p class="absolute dancingscript">A Touch of Gold</p>
                 </div>
             </div>
         </section>
@@ -234,8 +236,8 @@
 
             <img src="images/vectors/vector2.png" alt="" class="-mt-12 z-10 w-72 opacity-50">
         </section>
-        
-        <!-- CountDown Timer -->
+
+        <!-- CountDown Timer✔️ -->
         <section
             class="relative bg-pink-200 h-96 flex flex-col items-center justify-center space-y-5 glass overflow-hidden">
             <img src="images/vectors/vector1.png" alt="" class="absolute bottom-0 opacity-10 md:w-8/12">
@@ -309,37 +311,64 @@
                 </p>
             </section>
 
-            <!-- Contact Information -->
+            <!-- Contact Information✔️ -->
             <section class="bg-pink-200 flex flex-col items-center justify-center py-8 lg:w-1/2 lg:h-full">
                 <h2 class="text-2xl font-semibold text-chocolate cinzel pb-5">Contact Information</h2>
 
                 <!-- Contact Details -->
-                <div class="mb-8 w-11/12 md:w-8/12">
+                <div class="mb-6 w-11/12 md:w-8/12">
+                    <p class="text-chocolate mb-2">
+                        For additional questions, please reach out to us;
+                    </p>
                     <h3 class="text-xl font-semibold text-chocolate">Phone Numbers:</h3>
                     <ul class="mt-2 text-chocolate text-xl space-y-2">
-                        <li>Lanre - <a href="tel:+2348026319473" class="text-blue-500 hover:underline">+234 802 631
-                                9473</a>
+                        <li class="flex items-center space-x-4">
+                            <span class="flex items-center"><img src="images/vectors/rep1.png" alt="" class="w-6"> Lanre
+                            </span>
+                            <a href="tel:+2348026319473"
+                                class="flex items-center text-blue-500 hover:underline p-1 bg-pink-100 rounded-lg">
+                                <img src="images/vectors/phone.png" alt="" class="w-6 pr-1">
+                                +234 802 631 9473
+                            </a>
                         </li>
-                        <li>Abigail - <a href="tel:+2348147104155" class="text-blue-500 hover:underline">+234 814 710
-                                4155</a></li>
-                        <li>Lewis - <a href="tel:+2348103620266" class="text-blue-500 hover:underline">+234 810 362
-                                0266</a>
+                        <li class="flex items-center space-x-2">
+                            <span class="flex items-center"><img src="images/vectors/rep2.png" alt="" class="w-6">
+                                Abigail </span>
+                            <a href="tel:+2348147104155"
+                                class="flex items-center text-blue-500 hover:underline p-1 bg-pink-100 rounded-lg">
+                                <img src="images/vectors/phone.png" alt="" class="w-6 pr-1">
+                                +234 814 710 4155
+                            </a>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <span class="flex items-center"><img src="images/vectors/rep1.png" alt="" class="w-6"> Lewis
+                            </span>
+                            <a href="tel:+2348147104155"
+                                class="flex items-center text-blue-500 hover:underline p-1 bg-pink-100 rounded-lg">
+                                <img src="images/vectors/phone.png" alt="" class="w-6 pr-1">
+                                +234 810 362 0266
+                            </a>
                         </li>
                     </ul>
+
                     <h3 class="text-xl font-semibold text-chocolate mt-4">Email:</h3>
-                    <p class="text-chocolate">
-                        For additional questions, please reach out to us via email at
-                        <a href="mailto:iluayo19@gmail.com" class="text-blue-500 hover:underline">
+                    <div class="flex items-center space-x-2">
+                        <p class="text-chocolate">
+                            Or Send us an email:
+                        </p>
+                        <a href="mailto:iluayo19@gmail.com"
+                            class="flex items-center text-blue-500 hover:underline p-1 bg-pink-100 rounded-lg">
+                            <img src="images/vectors/mail.png" alt="" class="w-6 pr-1">
                             iluayo19@gmail.com
                         </a>
-                    </p>
+                    </div>
                 </div>
 
                 <!-- Guestbook Section -->
                 <div class="border-t border-pink-900 pt-6 w-11/12 md:w-8/12">
                     <h3 class="text-xl font-semibold text-chocolate mb-2">Guestbook</h3>
                     <p class="text-chocolate mb-4">Leave a message or well-wishes for the couple below:</p>
-                    
+
                     <div id="formMessage2" class="text-center hidden">
                         <p class="success-message2 text-green-400 hidden">Thank you! Your message was sent successfully!
                         </p>
@@ -357,7 +386,8 @@
                                 class="w-full p-2 border border-gray-300 rounded-lg" placeholder="Your message here..."
                                 required></textarea>
                         </div>
-                        <button type="submit" id="submitBtn2" class="w-full bg-gold text-white font-semibold py-2 rounded-lg">
+                        <button type="submit" id="submitBtn2"
+                            class="w-full bg-gold text-white font-semibold py-2 rounded-lg">
                             <span class="submit-text2">Submit Message</span>
                             <span class="loading-text2 hidden">Submitting...</span>
                         </button>

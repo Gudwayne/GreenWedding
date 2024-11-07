@@ -184,6 +184,8 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
 
 const video = document.getElementById('myVideo');
 const playButton = document.getElementById('playButton');
+const playIcon = playButton.querySelector('.play-icon')
+const pauseIcon = playButton.querySelector('.pause-icon')
 const videoWrapper = document.querySelector('.video-wrapper');
 
 // Function to toggle play/pause
@@ -191,9 +193,12 @@ function togglePlay() {
   if (video.paused) {
     video.play();
     playButton.classList.add('hidden');
+    playIcon.classList.add('hidden');
+    pauseIcon.classList.remove('hidden');
   } else {
     video.pause();
     playButton.classList.remove('hidden');
+    playIcon.classList.remove('hidden');
   }
 }
 
@@ -206,17 +211,23 @@ video.addEventListener('click', togglePlay);
 // Show button when video is paused
 video.addEventListener('pause', () => {
   playButton.classList.remove('hidden');
+  playIcon.classList.remove('hidden');
+  pauseIcon.classList.add('hidden');
 });
 
 // Hide button when video starts playing
 video.addEventListener('play', () => {
   playButton.classList.add('hidden');
+  playIcon.classList.add('hidden');
+  pauseIcon.classList.remove('hidden');
 });
 
 // Show button when hovering over video while playing
 videoWrapper.addEventListener('mouseenter', () => {
   if (!video.paused) {
     playButton.classList.remove('hidden');
+    pauseIcon.classList.remove('hidden');
+    playIcon.classList.add('hidden');
   }
 });
 
@@ -224,6 +235,7 @@ videoWrapper.addEventListener('mouseenter', () => {
 videoWrapper.addEventListener('mouseleave', () => {
   if (!video.paused) {
     playButton.classList.add('hidden');
+    pauseIcon.classList.add('hidden');
   }
 });
 
@@ -249,7 +261,7 @@ document.getElementById('guestbookForm').addEventListener('submit', function (e)
     const text = {
         fullname: guestWish.get('guestName'),
         message: guestWish.get('message')
-    }
+    } 
 
     fetch('https://script.google.com/macros/s/AKfycbwVkklqUajFaRdxFvVKoXGMKa4DWiImDT0BI3nrTnzzoepetU6nzEBuT-4rngMh0WYEPQ/exec', {
         method: 'POST',

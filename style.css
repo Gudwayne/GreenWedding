@@ -9,10 +9,10 @@
 
 ::-webkit-scrollbar {
     width: 3px;
-}
+} 
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(67, 45, 34, 1);
+    background-color: rgb(170, 115, 23, 1);
 }
 
 .cinzel {
@@ -36,15 +36,15 @@
 }
 
 .text-gold {
-    color: #D4AF37;
+    color: #be8218;
 }
 
 .bg-gold {
-    background-color: #D4AF37;
+    background-color: #be8218;
 }
 
 .text-chocolate {
-    color: #3f342f;
+    color: #3a2925;
 }
 
 .bg-chocolate-dark {
@@ -52,7 +52,7 @@
 }
 
 .bg-chocolate {
-    background-color: #3f342f;
+    background-color: #3a2925;
 }
 
 .bg-chocolate-light {
@@ -148,6 +148,34 @@
     border-color: transparent transparent transparent white;
     margin-left: 2px;
   }
+  .pause-icon {
+    width: 32px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.pause-icon::before,
+.pause-icon::after {
+    content: "";
+    width: 4px; /* Adjust thickness of bars here */
+    height: 16px; /* Adjust height of bars here */
+    background-color: white;
+    position: absolute;
+    border-radius: 2px;
+}
+
+.pause-icon::before {
+    left: 9px; /* Adjust spacing between bars */
+}
+
+.pause-icon::after {
+    right: 9px; /* Adjust spacing between bars */
+}
 
   /* Video wrapper hover state */
   .video-wrapper:hover .play-button {
